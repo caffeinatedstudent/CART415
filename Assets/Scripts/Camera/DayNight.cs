@@ -15,6 +15,7 @@ public class DayNight : MonoBehaviour {
 	public Color32 color32 = new Color32(32, 27,32,53);
 	public bool ColorOn = false;
 
+
 	private AudioSource audioSource;
 	public AudioClip anthem;
 
@@ -30,6 +31,7 @@ public class DayNight : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
 		RotationCheck ();
 		transform.Rotate(new Vector3(0.08f,0f,0f));
 		if (ColorOn == false) {
@@ -47,7 +49,7 @@ public class DayNight : MonoBehaviour {
 		Debug.Log(this.coco);
 
 
-		if (Math.Round(coco,5) == 15.55939) {
+		if (Math.Round(coco,5) == 21.99551) {
 				foreach (GameObject obj in gameObjects) {
 					Instantiate (tank, obj.transform.position, Quaternion.identity);
 						ColorOn = true;
@@ -57,7 +59,7 @@ public class DayNight : MonoBehaviour {
 
 				}
 		}
-		if (Math.Round(coco,4) == 312.2011){
+		if (Math.Round(coco,4) == 318.7615){
 				ColorOn = false;
 
 			}
