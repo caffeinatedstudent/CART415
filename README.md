@@ -2,5 +2,5 @@
 
 
 -Lights, Camera Project
- -Rough Prototype Complete
- -Final Version - Incomplete
+
+- Rough Prototype - Complete
