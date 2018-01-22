@@ -1,6 +1,6 @@
 # CART 415 - Game Studio I
 
 
--Lights, Camera Project
+## Lights, Camera Project
 
 - Rough Prototype - Complete
