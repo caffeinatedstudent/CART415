@@ -110,6 +110,7 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+     <Compile Include="Assets\rotateworld.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
      <Compile Include="Assets\Scripts\Camera\DayNight.cs" />
      <Compile Include="Assets\Scripts\Managers\CameraMovement.cs" />
