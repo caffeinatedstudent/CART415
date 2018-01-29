@@ -18,21 +18,41 @@ public class CameraMovement : MonoBehaviour {
 	float rotationY = 0.0f;
 	float rotationX = 0.0f;
 
-	void Update () {
+	bool rightside = false;
 
+	bool leftside = false;
+
+	public GameObject rotateLight;
+
+
+
+	void Update () {
+		if (rightside == true) {
+			rotateLight.transform.Rotate(new Vector3(0.3f, 0f, 0f));
+
+		}
+
+		if (leftside == true) {
+			rotateLight.transform.Rotate(new Vector3(-0.3f, 0f, 0f));
+
+		}
 		float scroll = Input.GetAxis("Mouse ScrollWheel");
 		transform.Translate(0, scroll * zoomSpeed, scroll * zoomSpeed, Space.World);
 
-		if (Input.GetKey(KeyCode.RightArrow)){
+		if (Input.GetKey(KeyCode.D)){
 			transform.position += Vector3.right * speed * Time.deltaTime;
+			rightside = true;
+			leftside = false;
 		}
-		if (Input.GetKey(KeyCode.LeftArrow)){
+		if (Input.GetKey(KeyCode.A)){
 			transform.position += Vector3.left * speed * Time.deltaTime;
+			rightside = false;
+			leftside = true;
 		}
-		if (Input.GetKey(KeyCode.UpArrow)){
+		if (Input.GetKey(KeyCode.W)){
 			transform.position += Vector3.forward * speed * Time.deltaTime;
 		}
-		if (Input.GetKey(KeyCode.DownArrow)){
+		if (Input.GetKey(KeyCode.S)){
 			transform.position += Vector3.back * speed * Time.deltaTime;
 		}
 

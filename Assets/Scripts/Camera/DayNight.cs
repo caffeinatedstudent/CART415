@@ -36,7 +36,7 @@ namespace Complete
         {
 
             RotationCheck();
-            transform.Rotate(new Vector3(0.08f, 0f, 0f));
+           
             if (ColorOn == false)
             {
                 RenderSettings.ambientLight = color32;
@@ -55,7 +55,8 @@ namespace Complete
             Debug.Log(this.coco);
 
 
-			if (Math.Round(coco, 5) == 21.99551) 
+			if ((Math.Round(coco, 5) == 21.99551) || (Math.Round(coco,5) == 21.99557) || (Math.Round(coco,5) == 21.40009) || (Math.Round(coco, 5) == 15.26902
+			)|| (Math.Round(coco, 5) == 15.56708))
             {
 
                 for (int i = 0; i < tankManagers.Length; i++) {
@@ -82,13 +83,14 @@ namespace Complete
 
                 //}
             }
-            if (Math.Round(coco, 4) == 318.7615)
+			if ((Math.Round(coco, 4) == 318.7615)|| (Math.Round(coco, 4) == 53))
             {
                 ColorOn = false;
 				transform.rotation = originalRotationValue;
 				//this.transform.rotation.x = 53;
 				//gameObject.transform.rotation = originalPos;
             }
+
         }
     }
 

@@ -99,8 +99,7 @@ namespace Complete
             {
                 // If there is a game winner, restart the level.
                 SceneManager.LoadScene(0);
-            }
-            else
+            }           else
             {
                 // If there isn't a winner yet, restart this coroutine so the loop continues.
                 // Note that this coroutine doesn't yield.  This means that the current version of the GameLoop will end.

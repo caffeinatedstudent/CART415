@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using UnityEngine;
-using System.Collections;
-
+namespace Complete
+{
 public class rotateworld : MonoBehaviour {
 
 	//Target rotation speed
@@ -27,6 +26,11 @@ public class rotateworld : MonoBehaviour {
 
 	//Actual rotation speed
 	private float rotSpeed;
+
+	//Directional light object
+
+
+
 
 	void Update(){
 
@@ -52,15 +56,16 @@ public class rotateworld : MonoBehaviour {
 
 
 		//If press A, rotate the angle to the left, at the specified speed
-		if (Input.GetKey (KeyCode.A)){
+		if (Input.GetKey (KeyCode.Q)){
 			if (currentAngle < maxAngle) {
 				target.Rotate (0, 0, rotSpeed);
+
 			}
 		}
 
 		//If press D, rotate the angle to the right, at the specified rotation speed
-		if (Input.GetKey (KeyCode.D)) {
-
+		if (Input.GetKey (KeyCode.E)) {
+			
 			if (currentAngle > -maxAngle) {
 				target.Rotate (0, 0, -rotSpeed);
 
@@ -68,15 +73,16 @@ public class rotateworld : MonoBehaviour {
 		}
 
 		//If either A or D is released, then set reset position to true
-		if (Input.GetKeyUp (KeyCode.A) || Input.GetKeyUp (KeyCode.D)) {
+		if (Input.GetKeyUp (KeyCode.Q) || Input.GetKeyUp (KeyCode.E)) {
 			resetPosition = true;
+
 		}
 
 		//If reset position is set to true
 		if (resetPosition == true) {
 
 			//And as long as A or D are not pressed 
-			if ((!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D))) {
+			if ((!Input.GetKey (KeyCode.Q) && !Input.GetKey (KeyCode.E))) {
 
 				//If the current angle is greater than the origin angle then decrease it's value
 				if (currentAngle > originAngle) {
@@ -95,4 +101,5 @@ public class rotateworld : MonoBehaviour {
 			}
 		}
 	}
+}
 }
