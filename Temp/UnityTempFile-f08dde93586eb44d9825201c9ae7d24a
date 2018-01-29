@@ -97,6 +97,9 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 -define:UNITY_PRO_LICENSE
+'Assets/CamRotation.cs'
+'Assets/DungeonCamera.cs'
+'Assets/FollowCamera.cs'
 'Assets/PluggableAI/Scripts/ActiveStateDecision.cs'
 'Assets/PluggableAI/Scripts/AttackAction.cs'
 'Assets/PluggableAI/Scripts/ChaseAction.cs'
@@ -155,6 +158,7 @@
 'Assets/PostProcessing/Runtime/Utils/RenderTextureFactory.cs'
 'Assets/Scripts/Camera/CameraControl.cs'
 'Assets/Scripts/Camera/DayNight.cs'
+'Assets/Scripts/Managers/CameraMovement.cs'
 'Assets/Scripts/Managers/GameManager.cs'
 'Assets/Scripts/Managers/TankManager.cs'
 'Assets/Scripts/Shell/ShellExplosion.cs'
