@@ -20,6 +20,8 @@ namespace Complete
         private AudioSource audioSource;
         public AudioClip anthem;
 
+		private GameObject gogo;
+
         void Start()
         {
 			originalRotationValue = transform.rotation;
@@ -40,12 +42,14 @@ namespace Complete
             if (ColorOn == false)
             {
                 RenderSettings.ambientLight = color32;
+			
             }
             else if (ColorOn == true)
             {
                 RenderSettings.ambientLight = Color.red;
             }
         }
+
 
 
         void RotationCheck()
@@ -55,14 +59,16 @@ namespace Complete
             Debug.Log(this.coco);
 
 
-			if ((Math.Round(coco, 5) == 21.99551) || (Math.Round(coco,5) == 21.99557) || (Math.Round(coco,5) == 21.40009) || (Math.Round(coco, 5) == 15.26902
-			)|| (Math.Round(coco, 5) == 15.56708))
+			if (coco < 14) 
+
             {
 
                 for (int i = 0; i < tankManagers.Length; i++) {
-                    tankManagers[i].m_Instance = Instantiate(tankPrefab, tankManagers[i].m_SpawnPoint.position, tankManagers[i].m_SpawnPoint.rotation) as GameObject;
+                   gogo = tankManagers[i].m_Instance = Instantiate(tankPrefab, tankManagers[i].m_SpawnPoint.position, tankManagers[i].m_SpawnPoint.rotation) as GameObject;
                     tankManagers[i].m_PlayerNumber = i + 10;
                     tankManagers[i].SetupAI(waypointsForAI);
+					gogo.tag = "Enemy";
+
                 }
 
                 ColorOn = true;
@@ -85,11 +91,18 @@ namespace Complete
             }
 			if ((Math.Round(coco, 4) == 318.7615)|| (Math.Round(coco, 4) == 53))
             {
+				
+
+
                 ColorOn = false;
 				transform.rotation = originalRotationValue;
+
 				//this.transform.rotation.x = 53;
 				//gameObject.transform.rotation = originalPos;
+
             }
+
+
 
         }
     }
