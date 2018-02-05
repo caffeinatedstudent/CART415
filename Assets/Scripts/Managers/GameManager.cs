@@ -119,7 +119,7 @@ namespace Complete
 
             // Increment the round number and display text showing the players what round it is.
             m_RoundNumber++;
-            m_MessageText.text = "ROUND " + m_RoundNumber;
+			m_MessageText.text = "ROUND " + m_RoundNumber + "\nWASD to move camera \nA/D moves light" + "\nUP/DOWN/LEFT/RIGHT to move";
 
             // Wait for the specified length of time until yielding control back to the game loop.
             yield return m_StartWait;
