@@ -1,5 +1,6 @@
 ﻿#pragma strict
 import UnityEngine.UI;
+import UnityEngine.SceneManagement;
 
 var CameraObject : Animator;
 var PanelControls : GameObject;
@@ -18,6 +19,7 @@ var season_Pass : GameObject;
 // campaign button sub menu
 var continueBtn : GameObject;
 var newGameBtn : GameObject;
+
 var loadGameBtn : GameObject;
 
 // highlights
@@ -28,6 +30,8 @@ var lineKeyBindings : GameObject;
 var lineMovement : GameObject;
 var lineCombat : GameObject;
 var lineGeneral : GameObject;
+
+
 
 function PlayCampaign(){
 	areYouSure.gameObject.active = false;
@@ -149,6 +153,7 @@ function AreYouSure(){
 
 function No(){
 	areYouSure.gameObject.active = false;
+	season_Pass.gameObject.active = false;
 }
 function Season_Pass(){
 	season_Pass.gameObject.active = true;
@@ -162,5 +167,11 @@ function Yes(){
 
 function Weburl(){
 Application.OpenURL ("https://www.origin.com/can/en-us/store");
+}
+function newGame(){
+
+SceneManager.LoadScene("Main");
+
+
 	
 }
