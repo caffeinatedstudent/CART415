@@ -64,10 +64,10 @@ namespace Complete
             {
 
                 for (int i = 0; i < tankManagers.Length; i++) {
-                   gogo = tankManagers[i].m_Instance = Instantiate(tankPrefab, tankManagers[i].m_SpawnPoint.position, tankManagers[i].m_SpawnPoint.rotation) as GameObject;
+                   tankManagers[i].m_Instance = Instantiate(tankPrefab, tankManagers[i].m_SpawnPoint.position, tankManagers[i].m_SpawnPoint.rotation) as GameObject;
                     tankManagers[i].m_PlayerNumber = i + 10;
                     tankManagers[i].SetupAI(waypointsForAI);
-					gogo.tag = "Enemy";
+
 
                 }
 
