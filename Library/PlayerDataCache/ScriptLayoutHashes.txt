@@ -1,6 +1,5 @@
 OSXStandalone
 SceneListBegin?
-Assets/CFX_MainMenu/OfficialScenes/MenuNOVFX.unity
 Assets/Scenes/Main.unity
 SceneListEnd?
 a9e479775ec385847aadca74d0bb98f8 Assembly-CSharp.dll:.EnemyStats
