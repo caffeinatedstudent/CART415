@@ -21,12 +21,19 @@ public class Building : MonoBehaviour
 	public const int HQ 	= 2;
 	public const int BASE 	= 3;
 
+	//sfx
+	public AudioClip CityCheer;
+	public AudioClip CityScream;
+	public AudioClip CityFire;
+
 	void Start ()
 	{
 		Game = GameObject.Find("Game").GetComponent<Game>();
 
 		SetTeam(Team, true);
 	}
+
+
 	public void Reset()
 	{
 		Selected = false;
@@ -81,6 +88,9 @@ public class Building : MonoBehaviour
 		SetTeam();
 
 		gameObject.GetComponent<Collider>().enabled = false;
+		if (Type == CITY) {
+			GetComponent<AudioSource>().PlayOneShot(CityCheer);
+		}
 	}
 	public void OnUnitLeave()
 	{
@@ -96,6 +106,11 @@ public class Building : MonoBehaviour
 
 	public void Capture(int hitPoints, int team)
 	{
+		if (Type == CITY) {
+			GetComponent<AudioSource>().PlayOneShot(CityFire);
+			GetComponent<AudioSource>().PlayOneShot(CityScream);
+
+		}
 		if (HitPoints - hitPoints <= 0)
 		{
 			int previousTeam = Team;
