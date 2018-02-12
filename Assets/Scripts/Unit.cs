@@ -40,7 +40,7 @@ public class Unit : MonoBehaviour
 	private float Speed = 10;
 	private float AnimBounceSpeed = 0.35f;
 	private float AnimBounceDir = 1;
-	private float ScaleY = 1;
+	private float ScaleY = 0.01f;
 	private float PosY;
 	public float GetPosY() { return PosY; }
 	private float ColorMultiplier = 1;
