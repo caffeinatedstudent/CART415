@@ -14,6 +14,7 @@ public class Activator : MonoBehaviour {
 	bool active = false;
 	GameObject note;
 	public GameObject explosion;
+	public List<Transform> TankParts;
 
 	void Awake(){
 //		sr = GetComponent<SpriteRenderer> ();
@@ -30,7 +31,7 @@ public class Activator : MonoBehaviour {
 		if(Input.GetKeyDown(key))
 			
 		//Assign the changed color to the material.
-	//	StartCoroutine (Pressed ());
+		StartCoroutine (Pressed ());
 		Instantiate (explosion, transform.position, transform.rotation);
 		if (Input.GetKeyDown (key) && active) {
 			Destroy (note);
@@ -48,10 +49,14 @@ public class Activator : MonoBehaviour {
 		active = false;
 	}
 
-	//IEnumerator Pressed(){
-	//	rend.material.color = altColor;
-	//	yield return new WaitForSeconds (0.2f);
-	//	rend.material.color = oldColor;
+	IEnumerator Pressed(){
+	//	gameObject.GetComponent<Renderer> ().enabled = false;
 
-	//}	
+	//	rend.material.color = altColor;
+	yield return new WaitForSeconds (0.2f);
+	//	rend.material.color = oldColor;
+		//GetComponent<Renderer> ().enabled = true;
+
+
+	}	
 }
