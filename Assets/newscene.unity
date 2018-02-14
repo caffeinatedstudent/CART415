@@ -113,6 +113,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &339827 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4580109432857460, guid: 00aa2070a39094e1eba4aea26520dcd1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1641536842}
 --- !u!1001 &43885113
 Prefab:
   m_ObjectHideFlags: 0
@@ -507,6 +512,11 @@ Transform:
   m_Father: {fileID: 2052010660}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &368096418 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4736083863740728, guid: 00aa2070a39094e1eba4aea26520dcd1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1641536842}
 --- !u!1001 &476781689
 Prefab:
   m_ObjectHideFlags: 0
@@ -721,6 +731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 0
   explosion: {fileID: 0}
+  TankParts: []
 --- !u!1 &573851868
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +760,11 @@ Transform:
   m_Father: {fileID: 1968004492}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &622395763 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4860639514659326, guid: 00aa2070a39094e1eba4aea26520dcd1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1641536842}
 --- !u!1001 &730942453
 Prefab:
   m_ObjectHideFlags: 0
@@ -1092,6 +1108,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114139880280552978, guid: 00aa2070a39094e1eba4aea26520dcd1,
+        type: 2}
+      propertyPath: TankParts.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4519838489205478, guid: 00aa2070a39094e1eba4aea26520dcd1, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.5
@@ -1164,6 +1185,26 @@ Prefab:
       propertyPath: rend
       value: 
       objectReference: {fileID: 1746375738}
+    - target: {fileID: 114139880280552978, guid: 00aa2070a39094e1eba4aea26520dcd1,
+        type: 2}
+      propertyPath: TankParts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1746375737}
+    - target: {fileID: 114139880280552978, guid: 00aa2070a39094e1eba4aea26520dcd1,
+        type: 2}
+      propertyPath: TankParts.Array.data[1]
+      value: 
+      objectReference: {fileID: 622395763}
+    - target: {fileID: 114139880280552978, guid: 00aa2070a39094e1eba4aea26520dcd1,
+        type: 2}
+      propertyPath: TankParts.Array.data[2]
+      value: 
+      objectReference: {fileID: 368096418}
+    - target: {fileID: 114139880280552978, guid: 00aa2070a39094e1eba4aea26520dcd1,
+        type: 2}
+      propertyPath: TankParts.Array.data[3]
+      value: 
+      objectReference: {fileID: 339827}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 00aa2070a39094e1eba4aea26520dcd1, type: 2}
   m_IsPrefabParent: 0
@@ -1248,6 +1289,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1746375737 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4080894026734540, guid: 00aa2070a39094e1eba4aea26520dcd1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1641536842}
 --- !u!23 &1746375738 stripped
 MeshRenderer:
   m_PrefabParentObject: {fileID: 23326705104099534, guid: 00aa2070a39094e1eba4aea26520dcd1,
