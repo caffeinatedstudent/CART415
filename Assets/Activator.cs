@@ -8,6 +8,7 @@ public class Activator : MonoBehaviour {
 	public AudioSource Scored;
 
 	public Color oldColor;
+	public bool CreateMode;
 
 	public bool inTrigger;
 	public bool isPlaying;
@@ -15,10 +16,18 @@ public class Activator : MonoBehaviour {
 	public KeyCode key;
 	bool active = false;
 	GameObject note;
-	public Transform Effect_Explosion;
+	public GameObject n;
 
 	public GameObject bodyColor;
 	public GameObject turretColor;
+
+
+ //public GameObject shot;
+ //public Transform shotSpawn; 
+ //public float fireRate;
+
+ //private float nextFire; 
+
 	void Awake(){
 
 		oldColor = bodyColor.GetComponentInChildren<MeshRenderer> ().material.color;
@@ -29,17 +38,28 @@ public class Activator : MonoBehaviour {
 		Scored = GetComponent<AudioSource> ();
 		inTrigger = false;
 		isPlaying = false;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		if(CreateMode){
+			if(Input.GetKeyDown(key))
+			Instantiate(n,transform.position,Quaternion.identity);
+		}else{
 	  
 		if(Input.GetKeyDown(key))
-			
+
+			//	shot = Instantiate(shot) as GameObject;
+				//  nextFire = Time.time + fireRate;
+ 					  //GameObject clone = 
+  				//	 shot.transform.position = shotSpawn.transform.position;
+   				//		shot.GetComponent<Rigidbody>().AddForce(Vector3.up*400);
 		//Assign the changed color to the material.
 		StartCoroutine (Pressed ());
-		
+		if(Input.GetKeyDown(key)){
+			Scored.Play();
+		}
 		if (Input.GetKeyUp (key)) {
 			if (isPlaying) {
 				// turn music OFF
@@ -55,11 +75,14 @@ public class Activator : MonoBehaviour {
 				Scored.Play();
 				isPlaying = true;
 			}
-			Instantiate (Effect_Explosion, transform.position, Quaternion.identity);
+		//	Instantiate (Effect_Explosion, transform.position, Quaternion.identity);
 			Destroy (note);
 		}
 
+
+
 	}
+}
 
 	void OnTriggerEnter(Collider col){
 		active = true;

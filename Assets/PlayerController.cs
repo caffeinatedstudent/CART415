@@ -1,13 +1,36 @@
 ﻿using UnityEngine;
+using System.Collections;
 
-public class PlayerController : MonoBehaviour
+[System.Serializable]
+
+
+
+public class PlayerController : MonoBehaviour 
 {
-	void Update()
-	{
-		var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-		var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+	public KeyCode key;
+	
+	
+public GameObject _instance;
+ public GameObject shot;
+ public Transform shotSpawn; 
+ public float fireRate;
 
-		transform.Rotate(0, x, 0);
-		transform.Translate(0, 0, z);
-	}
+ private float nextFire; 
+
+ void Update () 
+ {
+  if (Input.GetKeyDown(key) && Time.time > nextFire) 
+  {
+   _instance = Instantiate(shot) as GameObject;
+   _instance.gameObject.tag= "Shell";
+   nextFire = Time.time + fireRate;
+   //GameObject clone = 
+   _instance.transform.position = shotSpawn.transform.position;
+   _instance.GetComponent<Rigidbody>().AddForce(Vector3.up*9000);
+  }
+
+ }
+
+ 
+	
 }
