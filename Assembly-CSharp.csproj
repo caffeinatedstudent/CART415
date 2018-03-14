@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ActiveScript.cs" />
      <Compile Include="Assets\CamRotation.cs" />
      <Compile Include="Assets\DungeonCamera.cs" />
      <Compile Include="Assets\FollowCamera.cs" />
