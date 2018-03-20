@@ -5,7 +5,6 @@ using UnityEngine;
 public class NewGameManager : MonoBehaviour {
 int multiplier = 2;
 int streak = 0;
-	public ActiveScript ActS;
 	// Use this for initialization
 	void Start () {
 		PlayerPrefs.SetInt("Score",0);
@@ -17,18 +16,20 @@ int streak = 0;
 	}
 
 void OnTriggerEnter (Collider hit){
-		if (ActS.active == true) {
-			
  		
-			if (hit.gameObject.tag == "ball") {
+ if(hit.gameObject.tag == "ball")
+ {
       
-				AddScore ();
-				ActS.active = false;
-			}
-		}
-	}
+			AddScore ();
+              
+ }
+}
 void AddScore () {
- PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score")+100);
+ PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score")+1000);
+}
+public void MinusScore () {
+		int minus = 100;
+		PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score")-minus);
 }
 public void AddStreak(){
 	streak++;

@@ -1,7 +1,4 @@
 sceneSetups:
-- path: Assets/CFX_MainMenu/OfficialScenes/MenuNOVFX.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/Scenes/Main.unity
+- path: Assets/save.unity
   isLoaded: 1
   isActive: 1

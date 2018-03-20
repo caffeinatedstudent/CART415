@@ -73,6 +73,8 @@ namespace Complete
         {
             // Set the flag so that this function is only called once.
             m_Dead = true;
+			Application.LoadLevel(Application.loadedLevel);
+
 
             // Move the instantiated explosion prefab to the tank's position and turn it on.
             m_ExplosionParticles.transform.position = transform.position;
