@@ -21,10 +21,9 @@ public class MinusScore : MonoBehaviour {
 		if(hit.gameObject.tag == "ball")
 		{
 
-			newmanager.MinusScore ();
+			MinusScore();
 
 		}
-	}
 }
 
 

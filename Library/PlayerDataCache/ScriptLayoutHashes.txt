@@ -222,3 +222,4 @@ b8d183ea1c72c9bf82ea68a5b3215332 Assembly-CSharp.dll:.FollowScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-UnityScript.dll:.CheckSFXVolume
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CamRotation
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
+0ed942a4ef26771d08a77579e57fc253 Assembly-CSharp.dll:.ActiveScript

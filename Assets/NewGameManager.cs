@@ -28,8 +28,8 @@ void AddScore () {
  PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score")+1000);
 }
 public void MinusScore () {
-		int minus = 100;
-		PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score")-minus);
+		
+		PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score")-100);
 }
 public void AddStreak(){
 	streak++;
