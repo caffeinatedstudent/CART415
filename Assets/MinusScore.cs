@@ -8,12 +8,12 @@ public class MinusScore : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	void OnTriggerEnter (Collider hit){
@@ -21,9 +21,8 @@ public class MinusScore : MonoBehaviour {
 		if(hit.gameObject.tag == "ball")
 		{
 
-			MinusScore();
+			newmanager.MinusScore();
 
 		}
 }
-
-
+}

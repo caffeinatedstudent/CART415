@@ -163,6 +163,7 @@ ba8d22a92b2908a97be4b61c83e8deb8 Assembly-CSharp.dll:Complete.ShellExplosion
 ad8515024b323eb6daa3d90a55fc67f4 Assembly-CSharp.dll:.E_AI
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.ObjectResetter
+0ed942a4ef26771d08a77579e57fc253 Assembly-CSharp.dll:.ActiveScript
 b9a94288e2ccebd15dd1fb6fa5754645 Assembly-UnityScript.dll:.OptionsMenu
 3f5d2d59bee0081ad0aa232e8a506f8c Assembly-CSharp.dll:.Ball
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -222,4 +223,3 @@ b8d183ea1c72c9bf82ea68a5b3215332 Assembly-CSharp.dll:.FollowScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-UnityScript.dll:.CheckSFXVolume
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CamRotation
 0f3d4bb7128a287827d041c696039525 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-0ed942a4ef26771d08a77579e57fc253 Assembly-CSharp.dll:.ActiveScript
