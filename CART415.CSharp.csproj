@@ -294,6 +294,7 @@
     <Compile Include="Assets\CamRotation.cs" />
     <Compile Include="Assets\DungeonCamera.cs" />
     <Compile Include="Assets\FollowCamera.cs" />
+    <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\PlayVideo.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\ActiveStateDecision.cs" />
     <Compile Include="Assets\PluggableAI\Scripts\AttackAction.cs" />
