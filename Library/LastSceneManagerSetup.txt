@@ -1,0 +1,13 @@
+sceneSetups:
+- path: Assets/mainmenu.unity
+  isLoaded: 1
+  isActive: 1
+- path: Assets/TankMania.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Main.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/save.unity
+  isLoaded: 0
+  isActive: 0
